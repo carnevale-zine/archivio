@@ -1,2 +1,2 @@
-# minimald6
-Big list of all minimald6 RPGs
+# Vecchio Carnevale Blogghereccio
+L'archivio dei contributi del vecchio carnevale blogghereccio e della zine Carnevale
