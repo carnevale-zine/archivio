@@ -1,10 +1,10 @@
-repository: minimald6
+repository: archivio
 staticman:
   branch: gh-pages
 permalink: /:slug-:month:day:short_year
 include: ['_pages']
 
-title: Jekyll-db
-description:
+title: Carnevale
+description: Archivio del Vecchio Carnevale Blogghereccio e della zine
 google_analytics:
 show_downloads: true
