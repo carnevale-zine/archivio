@@ -8,7 +8,7 @@ mirror: https://web.archive.org/web/20210512093132/https://d20d12.blogspot.com/2
 tema: mare
 mese: febbraio 2021
 zine-n: 0
-licenza: CC-BY-SA 4.0
+licenza: CC BY-SA 4.0
 categoria:
 - regole
 - tabelle
