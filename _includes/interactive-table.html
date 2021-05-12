@@ -8,63 +8,65 @@
 <table class="table table-striped">
 	<thead>
 		<tr>
+			<th style="width:15%;"><span class="sort" data-sort="titolo">Titolo</span></th>
+			<th style="width:15%;"><span class="sort" data-sort="autore">Autore</span></th>
+			<th style="width:25%;"><span class="sort" data-sort="descrizione">Descrizione</span></th>
 			<th style="width:5%;"><span class="sort" data-sort="link">Link</span></th>
-			<th style="width:10%;"><span class="sort" data-sort="pocketmod">PocketMod</span></th>
-			<th style="width:15%;"><span class="sort" data-sort="rpg-name">RPG Name</span></th>
-			<th style="width:5%;"><span class="sort" data-sort="source">Source</span></th>
-			<!--<th style="width:5%;"><span class="sort" data-sort="license">License</span></th>-->
-			<th style="width:10%;"><span class="sort" data-sort="cost">Cost</span></th>
-			<th style="width:15%;"><span class="sort" data-sort="author">Author</span></th>
-			<th style="width:25%;"><span class="sort" data-sort="description">Description</span></th>
-			<th style="width:10%;"><span class="sort" data-sort="category">Category</span></th>
-			<th style="width:10%;"><span class="sort" data-sort="review-count">#</span></th>
+			<th style="width:10%;"><span class="sort" data-sort="mirror">Mirror</span></th>
+			<th style="width:5%;"><span class="sort" data-sort="tema">Tema</span></th>
+			<th style="width:5%;"><span class="sort" data-sort="mese">Mese</span></th>
+			<th style="width:5%;"><span class="sort" data-sort="zine-n"># Zine</span></th>
+			<th style="width:5%;"><span class="sort" data-sort="licenza">Licenza</span></th>
+			<th style="width:10%;"><span class="sort" data-sort="categoria">Categoria</span></th>
 		</tr>
 	</thead>
 	<tbody class="list">
 	{% assign sortedPosts = site.posts | sort: 'title' %}
 	{% for post in sortedPosts %}
 		<tr>
-			<td class="link">
-	{% if post.link %}
-			<a href="{{ post.link }}" target="_blank">
-			<button type="button" class="btn btn-primary">
-				Get <i class="fa fa-external-link"></i>
-			</button>
-			</a>
-			{% endif %}
- 		 </td>
-			<td class="pocketmod-link">
-  {% if post.pocketmod-link %}
-    	<a href="{{ post.pocketmod-link }}" target="_blank">
-      <button type="button" class="btn btn-primary">
-				Get <i class="fa fa-external-link"></i>
-      </button>
-    	</a>
-  		{% endif %}
+			<td class="titolo">
+			   <!-- <a href="{{ site.baseurl }}{{ post.url }}"> -->
+					<!-- {% if post.display-title %} -->
+						<!-- {{ post.display-title }} -->
+					<!-- {% else %} -->
+				  <!-- {% assign words = post.slug | replace: '-', ' ' | split: ' ' %} -->
+				  <!-- {% capture titlecase %}{% for word in words %}{{ word | capitalize }} {% endfor %}{% endcapture %} -->
+				  <!-- {{ titlecase }} -->
+					<!-- {% endif %} -->
+			   <!-- </a> -->
 			</td>
-			<td class="rpg-name">
-   <a href="{{ site.baseurl }}{{ post.url }}">
-        {% if post.display-title %}
-            {{ post.display-title }}
-        {% else %}
-      {% assign words = post.slug | replace: '-', ' ' | split: ' ' %}
-      {% capture titlecase %}{% for word in words %}{{ word | capitalize }} {% endfor %}{% endcapture %}
-      {{ titlecase }}
-        {% endif %}
-   </a></td>
-			<td class="source">
-				{% if post.source-url %}<a href="{{ post.source-url }}" target="_blank">{{ post.source }}</a>{% else %} {{ post.source }} {% endif %}</td>
-			<!--<td class="license"><a href="{{ site.baseurl }}/{{post.license}}.html">{{ post.license }}</a></td>-->
-			<td class="cost"><a href="{{ site.baseurl }}/{{post.cost}}.html">{{ post.cost }}</a></td>
-			<td class="author">{{ post.author | join: ", " }}</td>
-			<td class="description">{{ post.excerpt | truncate: 200 }}</td>
-			<td class="category">{% for cat in post.categories %}<a href="{{ site.baseurl }}/{{ cat | replace: ' ', '-' }}.html">{{ cat }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}</td>
-      <td class="review-count">  {% capture loc %}{{ post.slug }}-{{ post.date | date: "%m" }}{{ post.date | date: "%d" }}{{ post.date | date: "%y" }}{% endcapture %}
-        {% if site.data.comments[loc].size > 0 %}
-          {{ site.data.comments[loc] | size }}
-        {% else %}
-           0
-        {% endif %}</td>
+			<td class="autore">{{ post.autore | join: ", " }}</td>
+			<td class="descrizione">{{ post.descrizione | truncate: 200 }}</td>
+			<td class="link">
+				{% if post.link %}
+					<a href="{{ post.link }}" target="_blank">
+						<button type="button" class="btn btn-primary">
+							Get <i class="fa fa-external-link"></i>
+						</button>
+					</a>
+				{% endif %}
+			</td>
+			<td class="mirror">
+			  {% if post.mirror %}
+					<a href="{{ post.mirror }}" target="_blank">
+					  <button type="button" class="btn btn-primary">
+								Get <i class="fa fa-external-link"></i>
+					  </button>
+					</a>
+				{% endif %}
+			</td>
+			<td class="tema">{{ post.tema | join: ", " }}</td>
+			<td class="mese">{{ post.mese | join: ", " }}</td>
+			<td class="zine-n">{{ post.zine-n | join: ", " }}</td>
+			<td class="licenza">{{ post.licenza | join: ", " }}
+				<!-- <a href="{{ site.baseurl }}/{{post.licenza}}.html">{{ post.licenza }}</a> -->
+			</td>
+			<td class="categoria">{{ post.categoria | join: ", " }}
+				<!-- {% for cat in post.categories %} -->
+					<!-- <a href="{{ site.baseurl }}/{{ cat | replace: ' ', '-' }}.html">{{ cat }}</a> -->
+					<!-- {% if forloop.last == false %}, {% endif %} -->
+				<!-- {% endfor %} -->
+			</td>
 		</tr>
 	{% endfor %}
 	</tbody>
@@ -75,7 +77,7 @@
 
 <script type="text/javascript">
 var options = {
-  valueNames: ['link','pocketmod','rpg-name', 'source', 'cost', 'author', 'description', 'category', 'date-added', 'review-count']
+  valueNames: ['titolo','autore','descrizione', 'link', 'mirror', 'tema', 'mese', 'zine-n', 'licenza', 'categoria']
 };
 var entryList = new List('entry-list', options);
 
