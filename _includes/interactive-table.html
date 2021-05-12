@@ -11,7 +11,7 @@
 			<th style="width:15%;"><span class="sort" data-sort="titolo">Titolo</span></th>
 			<th style="width:15%;"><span class="sort" data-sort="autore">Autore</span></th>
 			<th style="width:25%;"><span class="sort" data-sort="descrizione">Descrizione</span></th>
-			<th style="width:5%;"><span class="sort" data-sort="link">Link</span></th>
+			<th style="width:5%;"><span class="sort" data-sort="link">Post</span></th>
 			<th style="width:5%;"><span class="sort" data-sort="mirror">Mirror</span></th>
 			<th style="width:5%;"><span class="sort" data-sort="tema">Tema</span></th>
 			<th style="width:5%;"><span class="sort" data-sort="mese">Mese</span></th>
@@ -41,7 +41,7 @@
 				{% if post.link %}
 					<a href="{{ post.link }}" target="_blank">
 						<button type="button" class="btn btn-primary">
-							Get <i class="fa fa-external-link"></i>
+							Vai <i class="fa fa-external-link"></i>
 						</button>
 					</a>
 				{% endif %}
@@ -50,7 +50,7 @@
 			  {% if post.mirror %}
 					<a href="{{ post.mirror }}" target="_blank">
 					  <button type="button" class="btn btn-primary">
-								Get <i class="fa fa-external-link"></i>
+								Vai <i class="fa fa-external-link"></i>
 					  </button>
 					</a>
 				{% endif %}
