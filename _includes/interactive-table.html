@@ -12,11 +12,11 @@
 			<th style="width:15%;"><span class="sort" data-sort="autore">Autore</span></th>
 			<th style="width:25%;"><span class="sort" data-sort="descrizione">Descrizione</span></th>
 			<th style="width:5%;"><span class="sort" data-sort="link">Link</span></th>
-			<th style="width:10%;"><span class="sort" data-sort="mirror">Mirror</span></th>
+			<th style="width:5%;"><span class="sort" data-sort="mirror">Mirror</span></th>
 			<th style="width:5%;"><span class="sort" data-sort="tema">Tema</span></th>
 			<th style="width:5%;"><span class="sort" data-sort="mese">Mese</span></th>
 			<th style="width:5%;"><span class="sort" data-sort="zine-n"># Zine</span></th>
-			<th style="width:5%;"><span class="sort" data-sort="licenza">Licenza</span></th>
+			<th style="width:10%;"><span class="sort" data-sort="licenza">Licenza</span></th>
 			<th style="width:10%;"><span class="sort" data-sort="categoria">Categoria</span></th>
 		</tr>
 	</thead>
@@ -24,7 +24,7 @@
 	{% assign sortedPosts = site.posts | sort: 'title' %}
 	{% for post in sortedPosts %}
 		<tr>
-			<td class="titolo">
+			<td class="titolo">{{ post.titolo | join: ", " }}
 			   <!-- <a href="{{ site.baseurl }}{{ post.url }}"> -->
 					<!-- {% if post.display-title %} -->
 						<!-- {{ post.display-title }} -->
