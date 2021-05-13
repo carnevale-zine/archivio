@@ -1,7 +1,7 @@
 ---
 layout: entry
 titolo: "Voci dal cielo"
-autore: 'The Kernel In Yellow'
+autore: "The Kernel In Yellow"
 descrizione:  "tabelle per generare casualmente il rapporto con la divinità"
 link: https://oicn.icu/2021/vcb-voci-dal-cielo/
 mirror: https://web.archive.org/web/20210513145820/https://oicn.icu/2021/vcb-voci-dal-cielo/
