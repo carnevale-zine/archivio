@@ -11,5 +11,5 @@ zine-n: 1
 licenza: ©
 categoria:
 - teoria
--divinità
+- divinità
 ---
