@@ -7,7 +7,7 @@ link: https://oicn.icu/2021/vcb-voci-dal-cielo/
 mirror: https://web.archive.org/web/20210513145820/https://oicn.icu/2021/vcb-voci-dal-cielo/
 tema: religione
 mese: marzo 2021
-zine-n: -
+zine-n: no
 licenza: CC BY-NC-SA 4.0
 categoria:
 - tabelle
