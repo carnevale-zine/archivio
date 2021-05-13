@@ -10,5 +10,5 @@ mese: marzo 2021
 zine-n: 1
 licenza: CC BY-SA 4.0
 categoria:
-- classi
+- classe
 ---
